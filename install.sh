@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo -e "\e[1m----------------------------------------"
-echo -e "\e[1m       Dot Net Core Installer"
+echo -e "\e[1m       Dot Net 5 Installer"
 echo -e "\e[1m----------------------------------------"
 echo ""
 echo -e "\e[1mPete Codes / PJG Creations 2020"
