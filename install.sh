@@ -6,15 +6,14 @@ echo -e "\e[1m----------------------------------------"
 echo ""
 echo -e "\e[1mPete Codes / PJG Creations 2020"
 echo ""
-echo -e "Latest update 01/05/2020"
+echo -e "Latest update 01/10/2020"
 echo ""
 echo "This will install the following;"
 echo ""
 echo -e "\e[1m----------------------------------------"
 echo -e "\e[0m"
-echo "- Dot Net 5.0.100 - Preview 3 - 20216-6"
-echo "- ASP.NET 5.0.0 - Preview 3 - 20215-14"
-echo "- Blazor Preview 5 2016.8"
+echo "- Dot Net 5.0.100 - RC1 - 20452.10"
+echo "- ASP.NET 5.0.000 - RC1 - 20451.17"
 echo ""
 echo -e "\e[1m----------------------------------------"
 echo -e "\e[0m"
@@ -60,7 +59,7 @@ echo -e "\e[1m----------------------------------------"
 echo -e "\e[0m"
 
 cd ~/
-wget https://download.visualstudio.microsoft.com/download/pr/58276f20-1ff1-49e7-afbd-fcc6a20acf56/18aacff58da12a91e691036be7ef8063/dotnet-sdk-5.0.100-preview.3.20216.6-linux-arm.tar.gz
+wget https://download.visualstudio.microsoft.com/download/pr/e6456209-63c8-43fc-ba2d-11c43c9eacd5/3a12e6bae9ff57c1964eb83cb01604b6/dotnet-sdk-5.0.100-rc.1.20452.10-linux-arm.tar.gz
 
 echo -e "\e[0m"
 echo -e "\e[1m----------------------------------------"
@@ -68,7 +67,7 @@ echo -e "\e[1m       Getting ASP.NET 5 Runtime"
 echo -e "\e[1m----------------------------------------"
 echo -e "\e[0m"
 
-wget https://download.visualstudio.microsoft.com/download/pr/ffbb2903-bd07-47e0-aa7d-9264c942cc38/9937a6b2cf97e16f878f4f3feb874479/aspnetcore-runtime-5.0.0-preview.3.20215.14-linux-arm.tar.gz
+wget https://download.visualstudio.microsoft.com/download/pr/4f20eb4f-886c-44ba-aff4-c80356da3a53/e2933e72c3fdd65dd242f1260877a7f6/aspnetcore-runtime-5.0.0-rc.1.20451.17-linux-arm.tar.gz
 
 echo -e "\e[0m"
 echo -e "\e[1m----------------------------------------"
@@ -90,7 +89,7 @@ echo -e "\e[1m    Extracting Dot NET 5 Binaries"
 echo -e "\e[1m----------------------------------------"
 echo -e "\e[0m"
 
-tar -xvf dotnet-sdk-5.0.100-preview.3.20216.6-linux-arm.tar.gz -C /opt/dotnet/
+tar -xvf dotnet-sdk-5.0.100-rc.1.20452.10-linux-arm.tar.gz -C /opt/dotnet/
 
 echo -e "\e[0m"
 echo -e "\e[1m----------------------------------------"
@@ -98,7 +97,7 @@ echo -e "\e[1m    Extracting ASP.NET 5 Runtime"
 echo -e "\e[1m----------------------------------------"
 echo -e "\e[0m"
 
-tar -xvf aspnetcore-runtime-5.0.0-preview.3.20215.14-linux-arm.tar.gz -C /opt/dotnet/
+tar -xvf aspnetcore-runtime-5.0.0-rc.1.20451.17-linux-arm.tar.gz -C /opt/dotnet/
 
 echo -e "\e[0m"
 echo -e "\e[1m----------------------------------------"
@@ -120,14 +119,6 @@ else
   echo 'Adding Link to .bashrc'
   echo 'export DOTNET_ROOT=/opt/dotnet' >> ~/.bashrc
 fi
-
-echo -e "\e[0m"
-echo -e "\e[1m----------------------------------------"
-echo -e "\e[1m          Get Blazor Templates"
-echo -e "\e[1m----------------------------------------"
-echo -e "\e[0m"
-
-dotnet new -i Microsoft.AspNetCore.Components.WebAssembly.Templates::3.2.0-rc1.20223.4
 
 echo -e "\e[0m"
 echo -e "\e[1m----------------------------------------"
