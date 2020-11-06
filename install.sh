@@ -31,21 +31,6 @@ fi
 
 echo -e "\e[0m"
 echo -e "\e[1m----------------------------------------"
-echo -e "\e[1m           Performing Updates"
-echo -e "\e[1m----------------------------------------"
-echo -e "\e[0m"
-
-read -p "Do you wish to do perform a system update and upgrade first? " -n 1 -r
-echo ""
-if [[ $REPLY =~ ^[Yy]$ ]]; then
-    echo "Performing System Update and Upgrade"
-    echo ""
-    apt-get -y update
-    apt-get -y upgrade
-fi
-
-echo -e "\e[0m"
-echo -e "\e[1m----------------------------------------"
 echo -e "\e[1m         Installing Dependencies"
 echo -e "\e[1m----------------------------------------"
 echo -e "\e[0m"
