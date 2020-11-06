@@ -12,8 +12,8 @@ echo "This will install the following;"
 echo ""
 echo -e "\e[1m----------------------------------------"
 echo -e "\e[0m"
-echo "- Dot Net 5.0.100 - RC1 - 20452.10"
-echo "- ASP.NET 5.0.000 - RC1 - 20451.17"
+echo "- Dot Net 5.0.100 - RC2 - 20479.15"
+echo "- ASP.NET 5.0.000 - RC1 - 20475.17"
 echo ""
 echo -e "\e[1m----------------------------------------"
 echo -e "\e[0m"
@@ -59,7 +59,7 @@ echo -e "\e[1m----------------------------------------"
 echo -e "\e[0m"
 
 cd ~/
-wget https://download.visualstudio.microsoft.com/download/pr/e6456209-63c8-43fc-ba2d-11c43c9eacd5/3a12e6bae9ff57c1964eb83cb01604b6/dotnet-sdk-5.0.100-rc.1.20452.10-linux-arm.tar.gz
+wget https://download.visualstudio.microsoft.com/download/pr/068ebc6e-4a1d-45ec-a766-733a142f2839/e0da4c731c943ca2b267c15edb565108/dotnet-sdk-5.0.100-rc.2.20479.15-linux-arm.tar.gz
 
 echo -e "\e[0m"
 echo -e "\e[1m----------------------------------------"
@@ -67,7 +67,7 @@ echo -e "\e[1m       Getting ASP.NET 5 Runtime"
 echo -e "\e[1m----------------------------------------"
 echo -e "\e[0m"
 
-wget https://download.visualstudio.microsoft.com/download/pr/4f20eb4f-886c-44ba-aff4-c80356da3a53/e2933e72c3fdd65dd242f1260877a7f6/aspnetcore-runtime-5.0.0-rc.1.20451.17-linux-arm.tar.gz
+wget https://download.visualstudio.microsoft.com/download/pr/d28b2c72-92f7-44fd-b673-f7c24275f513/694228a9541d905bda4417156a9617df/aspnetcore-runtime-5.0.0-rc.2.20475.17-linux-arm.tar.gz
 
 echo -e "\e[0m"
 echo -e "\e[1m----------------------------------------"
@@ -89,7 +89,7 @@ echo -e "\e[1m    Extracting Dot NET 5 Binaries"
 echo -e "\e[1m----------------------------------------"
 echo -e "\e[0m"
 
-tar -xvf dotnet-sdk-5.0.100-rc.1.20452.10-linux-arm.tar.gz -C /opt/dotnet/
+tar -xvf dotnet-sdk-5.0.100-rc.2.20479.15-linux-arm.tar.gz -C /opt/dotnet/
 
 echo -e "\e[0m"
 echo -e "\e[1m----------------------------------------"
@@ -97,7 +97,7 @@ echo -e "\e[1m    Extracting ASP.NET 5 Runtime"
 echo -e "\e[1m----------------------------------------"
 echo -e "\e[0m"
 
-tar -xvf aspnetcore-runtime-5.0.0-rc.1.20451.17-linux-arm.tar.gz -C /opt/dotnet/
+tar -xvf aspnetcore-runtime-5.0.0-rc.2.20475.17-linux-arm.tar.gz -C /opt/dotnet/
 
 echo -e "\e[0m"
 echo -e "\e[1m----------------------------------------"
