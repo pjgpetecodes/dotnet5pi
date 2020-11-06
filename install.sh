@@ -98,7 +98,7 @@ echo -e "\e[1m    Make Link Permanent"
 echo -e "\e[1m----------------------------------------"
 echo -e "\e[0m"
 
-if grep -q 'export DOTNET_ROOT=' home/pi/.bashrc;  then
+if grep -q 'export DOTNET_ROOT=' /home/pi/.bashrc;  then
   echo 'Already added link to .bashrc'
 else
   echo 'Adding Link to .bashrc'
