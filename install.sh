@@ -44,7 +44,7 @@ echo -e "\e[1m----------------------------------------"
 echo -e "\e[0m"
 
 cd ~/
-wget https://download.visualstudio.microsoft.com/download/pr/068ebc6e-4a1d-45ec-a766-733a142f2839/e0da4c731c943ca2b267c15edb565108/dotnet-sdk-5.0.100-rc.2.20479.15-linux-arm.tar.gz
+wget https://download.visualstudio.microsoft.com/download/pr/e8912d3b-483b-4d6f-bd3a-3066b3194313/20f2261fe4e16e55df4bbe03c65a7648/dotnet-sdk-5.0.100-linux-arm.tar.gz
 
 echo -e "\e[0m"
 echo -e "\e[1m----------------------------------------"
@@ -52,7 +52,7 @@ echo -e "\e[1m       Getting ASP.NET 5 Runtime"
 echo -e "\e[1m----------------------------------------"
 echo -e "\e[0m"
 
-wget https://download.visualstudio.microsoft.com/download/pr/d28b2c72-92f7-44fd-b673-f7c24275f513/694228a9541d905bda4417156a9617df/aspnetcore-runtime-5.0.0-rc.2.20475.17-linux-arm.tar.gz
+wget https://download.visualstudio.microsoft.com/download/pr/1c5366e8-9b74-4017-96ae-47fc08832c22/504aed87590bd99c49d053bc6f980b6b/aspnetcore-runtime-5.0.0-linux-arm.tar.gz
 
 echo -e "\e[0m"
 echo -e "\e[1m----------------------------------------"
@@ -74,7 +74,7 @@ echo -e "\e[1m    Extracting Dot NET 5 Binaries"
 echo -e "\e[1m----------------------------------------"
 echo -e "\e[0m"
 
-tar -xvf dotnet-sdk-5.0.100-rc.2.20479.15-linux-arm.tar.gz -C /opt/dotnet/
+tar -xvf dotnet-sdk-5.0.100-linux-arm.tar.gz -C /opt/dotnet/
 
 echo -e "\e[0m"
 echo -e "\e[1m----------------------------------------"
@@ -82,7 +82,7 @@ echo -e "\e[1m    Extracting ASP.NET 5 Runtime"
 echo -e "\e[1m----------------------------------------"
 echo -e "\e[0m"
 
-tar -xvf aspnetcore-runtime-5.0.0-rc.2.20475.17-linux-arm.tar.gz -C /opt/dotnet/
+tar -xvf aspnetcore-runtime-5.0.0-linux-arm.tar.gz -C /opt/dotnet/
 
 echo -e "\e[0m"
 echo -e "\e[1m----------------------------------------"
