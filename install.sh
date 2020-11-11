@@ -39,11 +39,20 @@ apt-get -y install libunwind8 gettext
 
 echo -e "\e[0m"
 echo -e "\e[1m----------------------------------------"
-echo -e "\e[1m     Getting Dot Net 5 Binaries"
+echo -e "\e[1m           Remove Old Binaries"
 echo -e "\e[1m----------------------------------------"
 echo -e "\e[0m"
 
 cd ~/
+rm dotnet-sdk*
+rm aspnetcore*
+
+echo -e "\e[0m"
+echo -e "\e[1m----------------------------------------"
+echo -e "\e[1m     Getting Dot Net 5 Binaries"
+echo -e "\e[1m----------------------------------------"
+echo -e "\e[0m"
+
 wget https://download.visualstudio.microsoft.com/download/pr/e8912d3b-483b-4d6f-bd3a-3066b3194313/20f2261fe4e16e55df4bbe03c65a7648/dotnet-sdk-5.0.100-linux-arm.tar.gz
 
 echo -e "\e[0m"
