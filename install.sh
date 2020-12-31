@@ -1,19 +1,41 @@
 #!/bin/bash
 
+dotnetver=$1
+
+if [[ "$dotnetver" = "" ]]; then
+  versionspage=$(wget -qO - https://dotnet.microsoft.com/download/dotnet)
+  matchrecommended='\.NET ([^ ]*) \(recommended release\)'
+
+  [[ $versionspage =~ $matchrecommended ]]
+  dotnetver=${BASH_REMATCH[1]}
+fi
+
+sdkfile=/tmp/dotnetsdk.tar.gz
+aspnetfile=/tmp/aspnetcore.tar.gz
+
+download() {
+    [[ $downloadspage =~ $1 ]]
+    linkpage=$(wget -qO - https://dotnet.microsoft.com${BASH_REMATCH[1]})
+
+    matchdl='id="directLink" href="([^"]*)"'
+    [[ $linkpage =~ $matchdl ]]
+    wget -O $2 "${BASH_REMATCH[1]}"
+}
+
 echo -e "\e[1m----------------------------------------"
-echo -e "\e[1m       Dot Net 5 Installer"
+echo -e "\e[1m       Dot Net Installer"
 echo -e "\e[1m----------------------------------------"
 echo ""
 echo -e "\e[1mPete Codes / PJG Creations 2020"
 echo ""
 echo -e "Latest update 31/12/2020"
 echo ""
-echo "This will install the following;"
+echo "This will install the latest versions of the following:"
 echo ""
 echo -e "\e[1m----------------------------------------"
 echo -e "\e[0m"
-echo "- .NET 5.0.101"
-echo "- ASP.NET 5.0.1"
+echo "- .NET SDK $dotnetver"
+echo "- ASP.NET Runtime $dotnetver"
 echo ""
 echo -e "\e[1m----------------------------------------"
 echo -e "\e[0m"
@@ -25,7 +47,7 @@ echo -e "\e[1m----------------------------------------"
 echo -e "\e[0m"
 
 if [[ $EUID -ne 0 ]]; then
-   echo -e "\e[1;31mThis script must be run as root" 
+   echo -e "\e[1;31mThis script must be run as root (sudo $0)" 
    exit 1
 fi
 
@@ -43,25 +65,27 @@ echo -e "\e[1m           Remove Old Binaries"
 echo -e "\e[1m----------------------------------------"
 echo -e "\e[0m"
 
-cd ~/
-rm dotnet-sdk*
-rm aspnetcore*
+rm -f $sdkfile
+rm -f $aspnetfile
 
 echo -e "\e[0m"
 echo -e "\e[1m----------------------------------------"
-echo -e "\e[1m        Getting .NET 5 Binaries"
+echo -e "\e[1m        Getting .NET SDK $dotnetver"
 echo -e "\e[1m----------------------------------------"
 echo -e "\e[0m"
 
-wget https://download.visualstudio.microsoft.com/download/pr/567a64a8-810b-4c3f-85e3-bc9f9e06311b/02664afe4f3992a4d558ed066d906745/dotnet-sdk-5.0.101-linux-arm.tar.gz
+[[ "$dotnetver" > "5" ]] && dotnettype="dotnet" || dotnettype="dotnet-core"
+downloadspage=$(wget -qO - https://dotnet.microsoft.com/download/$dotnettype/$dotnetver)
+
+download 'href="([^"]*sdk-[^"/]*linux-arm32-binaries)"' $sdkfile
 
 echo -e "\e[0m"
 echo -e "\e[1m----------------------------------------"
-echo -e "\e[1m       Getting ASP.NET 5 Runtime"
+echo -e "\e[1m       Getting ASP.NET Runtime $dotnetver"
 echo -e "\e[1m----------------------------------------"
 echo -e "\e[0m"
 
-https://download.visualstudio.microsoft.com/download/pr/11977d43-d937-4fdb-a1fb-a20d56f1877d/73aa09b745586ac657110fd8b11c0275/aspnetcore-runtime-5.0.1-linux-arm.tar.gz
+download 'href="([^"]*aspnetcore-[^"/]*linux-arm32-binaries)"' $aspnetfile
 
 echo -e "\e[0m"
 echo -e "\e[1m----------------------------------------"
@@ -79,19 +103,19 @@ fi
 
 echo -e "\e[0m"
 echo -e "\e[1m----------------------------------------"
-echo -e "\e[1m    Extracting Dot NET 5 Binaries"
+echo -e "\e[1m    Extracting .NET SDK $dotnetver"
 echo -e "\e[1m----------------------------------------"
 echo -e "\e[0m"
 
-tar -xvf dotnet-sdk-5.0.101-linux-arm.tar.gz -C /opt/dotnet/
+tar -xvf $sdkfile -C /opt/dotnet/
 
 echo -e "\e[0m"
 echo -e "\e[1m----------------------------------------"
-echo -e "\e[1m    Extracting ASP.NET 5 Runtime"
+echo -e "\e[1m    Extracting ASP.NET Runtime $dotnetver"
 echo -e "\e[1m----------------------------------------"
 echo -e "\e[0m"
 
-tar -xvf aspnetcore-runtime-5.0.1-linux-arm.tar.gz -C /opt/dotnet/
+tar -xvf $aspnetfile -C /opt/dotnet/
 
 echo -e "\e[0m"
 echo -e "\e[1m----------------------------------------"
