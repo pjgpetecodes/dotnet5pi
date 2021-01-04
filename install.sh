@@ -1,5 +1,20 @@
 #!/bin/bash
 
+echo -e "\e[1m----------------------------------------"
+echo -e "\e[1m            .NET Installer"
+echo -e "\e[1m----------------------------------------"
+echo ""
+echo -e "\e[1mPete Codes / PJG Creations 2021"
+echo ""
+echo -e "Latest update 04/01/2021"
+echo ""
+
+echo -e "\e[0m"
+echo -e "\e[1m----------------------------------------"
+echo -e "\e[1m     Fetching Latest .NET Versions"
+echo -e "\e[1m----------------------------------------"
+echo -e "\e[0m"
+
 dotnetver=$1
 
 if [[ "$dotnetver" = "" ]]; then
@@ -22,13 +37,12 @@ download() {
     wget -O $2 "${BASH_REMATCH[1]}"
 }
 
+echo -e "\e[0m"
 echo -e "\e[1m----------------------------------------"
-echo -e "\e[1m       Dot Net Installer"
+echo -e "\e[1m        Installation information"
 echo -e "\e[1m----------------------------------------"
-echo ""
-echo -e "\e[1mPete Codes / PJG Creations 2020"
-echo ""
-echo -e "Latest update 31/12/2020"
+echo -e "\e[0m"
+
 echo ""
 echo "This will install the latest versions of the following:"
 echo ""
@@ -149,13 +163,13 @@ dotnet --info
 echo -e "\e[0m"
 echo -e "\e[1m----------------------------------------"
 echo -e "\e[1m              ALL DONE!"
-echo ""
 echo -e "\e[0mGo ahead and run \e[1mdotnet new console \e[0min a new directory!"
 echo ""
 echo ""
-echo -e "Let me know how you get on by tweeting me at \e[1;5m@pete_codes"
+echo -e "\e[1mNote: It's highly recommended that you perform a reboot at this point!"
+echo ""
+echo ""
+echo -e "\e[0mLet me know how you get on by tweeting me at \e[1;5m@pete_codes\e[0m"
 echo ""
 echo -e "\e[1m----------------------------------------"
 echo -e "\e[0m"
-
-
