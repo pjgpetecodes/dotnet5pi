@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 echo -e "\e[1m----------------------------------------"
 echo -e "\e[1m            .NET Installer"
@@ -151,6 +151,14 @@ else
   echo 'Adding Link to .bashrc'
   echo 'export DOTNET_ROOT=/opt/dotnet' >> /home/pi/.bashrc
 fi
+
+echo -e "\e[0m"
+echo -e "\e[1m----------------------------------------"
+echo -e "\e[1m       Reload .bashrc Config"
+echo -e "\e[1m----------------------------------------"
+echo -e "\e[0m"
+
+source /home/pi/.bashrc
 
 echo -e "\e[0m"
 echo -e "\e[1m----------------------------------------"
