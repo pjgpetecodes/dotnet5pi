@@ -154,6 +154,14 @@ fi
 
 echo -e "\e[0m"
 echo -e "\e[1m----------------------------------------"
+echo -e "\e[1m          Reload .bashrc Config"
+echo -e "\e[1m----------------------------------------"
+echo -e "\e[0m"
+
+source /home/pi/.bashrc
+
+echo -e "\e[0m"
+echo -e "\e[1m----------------------------------------"
 echo -e "\e[1m          Run dotnet --info"
 echo -e "\e[1m----------------------------------------"
 echo -e "\e[0m"
