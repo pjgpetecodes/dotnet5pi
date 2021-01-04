@@ -158,7 +158,7 @@ echo -e "\e[1m          Reload .bashrc Config"
 echo -e "\e[1m----------------------------------------"
 echo -e "\e[0m"
 
-source /home/pi/.bashrc
+exec bash
 
 echo -e "\e[0m"
 echo -e "\e[1m----------------------------------------"
