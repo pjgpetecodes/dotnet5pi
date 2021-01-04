@@ -154,14 +154,6 @@ fi
 
 echo -e "\e[0m"
 echo -e "\e[1m----------------------------------------"
-echo -e "\e[1m          Reload .bashrc Config"
-echo -e "\e[1m----------------------------------------"
-echo -e "\e[0m"
-
-export DOTNET_ROOT=/opt/dotnet
-
-echo -e "\e[0m"
-echo -e "\e[1m----------------------------------------"
 echo -e "\e[1m          Run dotnet --info"
 echo -e "\e[1m----------------------------------------"
 echo -e "\e[0m"
