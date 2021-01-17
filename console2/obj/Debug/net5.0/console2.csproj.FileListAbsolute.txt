@@ -1,0 +1,13 @@
+C:\dotnet5pi\console2\bin\Debug\net5.0\console2.exe
+C:\dotnet5pi\console2\bin\Debug\net5.0\console2.deps.json
+C:\dotnet5pi\console2\bin\Debug\net5.0\console2.runtimeconfig.json
+C:\dotnet5pi\console2\bin\Debug\net5.0\console2.runtimeconfig.dev.json
+C:\dotnet5pi\console2\bin\Debug\net5.0\console2.dll
+C:\dotnet5pi\console2\bin\Debug\net5.0\console2.pdb
+C:\dotnet5pi\console2\obj\Debug\net5.0\console2.csprojAssemblyReference.cache
+C:\dotnet5pi\console2\obj\Debug\net5.0\console2.AssemblyInfoInputs.cache
+C:\dotnet5pi\console2\obj\Debug\net5.0\console2.AssemblyInfo.cs
+C:\dotnet5pi\console2\obj\Debug\net5.0\console2.csproj.CoreCompileInputs.cache
+C:\dotnet5pi\console2\obj\Debug\net5.0\console2.dll
+C:\dotnet5pi\console2\obj\Debug\net5.0\console2.pdb
+C:\dotnet5pi\console2\obj\Debug\net5.0\console2.genruntimeconfig.cache

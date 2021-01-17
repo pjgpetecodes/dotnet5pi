@@ -9,7 +9,7 @@ namespace rpitest
     class Program
     {
 
-        private static readonly string connectionString = "[Enter your IoT hub Device Primary Connection String]";
+        private static readonly string connectionString = "HostName=petecodesiothub.azure-devices.net;DeviceId=raspberrypi;SharedAccessKey=aUdhO1CE6gNkCKoQbAomkwXX1V8oRTKfYvmzmzGvlI8=";
         private static DeviceClient deviceClient;
 
         static void Main(string[] args)

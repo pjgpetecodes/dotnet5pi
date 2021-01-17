@@ -7,25 +7,23 @@
             "type": "process",
             "args": [
                 "build",
-                "${workspaceFolder}/${workspaceFolderBasename}.csproj"
+                "${workspaceFolder}/uno.Skia.Gtk.csproj",
+                "/property:GenerateFullPaths=true",
+                "/consoleloggerparameters:NoSummary"
             ],
             "problemMatcher": "$msCompile"
         },
         {
             "label": "publish",
-            "type": "shell",
-            "dependsOn": "build",
-            "presentation": {
-                "reveal": "always",
-                "panel": "new"
-            },
-            "options": {
-                "cwd": "${workspaceFolder}"
-            },
-            "windows": {
-                "command": "${cwd}\\publish.bat"
-            },
-            "problemMatcher": []
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "publish",
+                "${workspaceFolder}/uno.Skia.Gtk.csproj",
+                "/property:GenerateFullPaths=true",
+                "/consoleloggerparameters:NoSummary"
+            ],
+            "problemMatcher": "$msCompile"
         },
         {
             "label": "watch",
@@ -34,7 +32,7 @@
             "args": [
                 "watch",
                 "run",
-                "${workspaceFolder}/consoleapp1.csproj",
+                "${workspaceFolder}/uno.Skia.Gtk.csproj",
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary"
             ],
@@ -51,7 +49,7 @@
                     "/c",
                     "\"dotnet publish -r linux-arm -o bin\\linux-arm\\publish\"",
                     "|",
-                    "\"scp -r ${workspaceFolder}/bin/linux-arm/publish/ pi@iothubpete2.local:/home/pi/share/${workspaceFolderBasename}\""
+                    "\"scp -r ${workspaceFolder}/bin/linux-arm/publish/ pi@rpi4:/home/pi/share/${workspaceFolderBasename}\""
                 ],
                 "problemMatcher": []
             }
@@ -65,7 +63,7 @@
                 "command": "cmd",
                 "args": [
                     "/c",
-                    "\"dotnet publish -r linux-arm -o bin\\linux-arm\\publish\""
+                    "\"dotnet publish -r linux-arm -o bin\\linux-arm\\publish --no-self-contained\""
                 ],
                 "problemMatcher": []
             }
@@ -82,7 +80,7 @@
             "command": "bash",
                 "args": [
                     "-c",
-                    "'sshpass -p \"raspberry\" rsync -rvuz $(wslpath '\"'${workspaceFolder}'\"')/bin/linux-arm/publish/ pi@192.168.1.76:share/${workspaceFolderBasename}/'"
+                    "'sshpass -p \"raspberry\" rsync -rvuz $(wslpath '\"'${workspaceFolder}'\"')/bin/linux-arm/publish/ pi@192.168.1.91:share/${workspaceFolderBasename}/'"
                 ],
                 "problemMatcher": []
             
@@ -106,7 +104,7 @@
         {
             "label": "echo",
             "type": "shell",
-            "command": "echo 'sshpass -p \"raspberry\" rsync -rvuz $(wslpath '\"'${workspaceFolder}'\"')/bin/linux-arm/publish/ pi@192.168.1.76:share/${workspaceFolderBasename}/'"
+            "command": "echo 'sshpass -p \"raspberry\" rsync -rvuz $(wslpath '\"'${workspaceFolder}'\"')/bin/linux-arm/publish/ pi@192.168.1.91:share/${workspaceFolderBasename}/'"
         }
     ]
 }

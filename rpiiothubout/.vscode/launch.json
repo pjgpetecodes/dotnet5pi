@@ -39,7 +39,7 @@
                  "pipeArgs": [
                      "-pw",
                      "raspberry",
-                     "root@mscognitive.local"
+                     "root@iothubpete2.local"
                  ],
                  "debuggerPath": "/home/pi/vsdbg/vsdbg"
              }

@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "hx7OmXdL6aI0KV3/8MxDTYpr/bwq8AjSt8CraUnes2w3PhvmxGNwmBdBxlpgEpoB/nlI6VCTa9WkcENo8h2LHg==",
+  "success": true,
+  "projectFilePath": "C:\\dotnet5pi\\console2\\console2.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\pete_\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.2\\microsoft.aspnetcore.app.ref.3.1.2.nupkg.sha512",
+    "C:\\Users\\pete_\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.2\\microsoft.netcore.app.host.win-x64.3.1.2.nupkg.sha512"
+  ],
+  "logs": []
+}
