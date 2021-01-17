@@ -1,6 +1,6 @@
 # Dot Net 5 with the Raspberry Pi
 
-This is the source code to accompany my talk on Microsoft Dot Net Core 5 with the Raspberry Pi.
+This is the source code to accompany my talk on Microsoft .Net 5 with the Raspberry Pi.
 
 Talk details, slides and a blog are incoming!
 
@@ -12,7 +12,7 @@ https://www.petecodes.co.uk/contact/
 
 Pete Gallagher / Pete Codes / PJG Creations 2020
 
-# Dot Net Core 3 Installation on a Raspberry Pi
+# .Net 5 Installation on a Raspberry Pi
 
 You can install Dot Net 5 on the Raspberry Pi in one command by executing;
 
