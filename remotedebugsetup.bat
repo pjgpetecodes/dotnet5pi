@@ -46,7 +46,17 @@ echo "|                                                            |"
 echo "--------------------------------------------------------------"
 echo(
 
-if not exist c:\users\%username%\.ssh\id_rsa ssh-keygen -f id_rsa -t rsa -N ""
+if not exist c:\users\%username%\.ssh\id_rsa ssh-keygen -f "c:\users\%username%\.ssh\id_rsa" -t rsa -N ""
+
+echo(
+echo "--------------------------------------------------------------"
+echo "|                                                            |"
+echo "|               Trusting Remote Raspberry Pi                 |"
+echo "|                                                            |"
+echo "--------------------------------------------------------------"
+echo(
+
+ssh-keyscan -H %pihostname% >> c:\users\.ssh\known_hosts
 
 echo(
 echo "--------------------------------------------------------------"
@@ -56,7 +66,7 @@ echo "|                                                            |"
 echo "--------------------------------------------------------------"
 echo(
 
-type c:\Users\%username%\.ssh\id_rsa.pub | ssh pi@%pihostname% "cat >> ~/.ssh/authorized_keys"
+type c:\Users\%username%\.ssh\id_rsa.pub | ssh -oStrictHostKeyChecking=no pi@%pihostname% "cat >> ~/.ssh/authorized_keys"
 
 echo(
 echo "--------------------------------------------------------------"
