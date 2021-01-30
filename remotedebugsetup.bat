@@ -86,7 +86,7 @@ echo "|                                                            |"
 echo "--------------------------------------------------------------"
 echo(
 
-if not exist c:\cwrsync\rsync.exe (
+if not exist "c:\cwrsync\rsync.exe" (
 
     mkdir c:\home\%USERNAME%\.ssh
     cd c:\home
