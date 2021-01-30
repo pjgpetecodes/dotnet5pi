@@ -46,7 +46,7 @@ echo "|                                                            |"
 echo "--------------------------------------------------------------"
 echo(
 
-if not exist c:\users\%username%\.ssh\id_rsa ssh-keygen -f id_rsa -t rsa -N ''
+if not exist c:\users\%username%\.ssh\id_rsa ssh-keygen -f id_rsa -t rsa -N ""
 
 echo(
 echo "--------------------------------------------------------------"
