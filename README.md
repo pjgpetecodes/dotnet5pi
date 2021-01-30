@@ -30,6 +30,12 @@ sudo ./install.sh
 
 ```
 
+# Setup PC for Remote Deployment and Debugging
+
+```
+curl --output remotedebugsetup.bat https://raw.githubusercontent.com/pjgpetecodes/dotnet5pi/master/remotedebugsetup.bat && remotedebugsetup.bat
+```
+
 # IoT Hub Connection
 
 The 3 IoT Hub Based Examples will require an IoT Hub Device Primary Connection String to work. 
