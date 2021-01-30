@@ -4,6 +4,7 @@
     <OutputType Condition="'$(Configuration)'=='Release'">WinExe</OutputType>
     <OutputType Condition="'$(Configuration)'=='Debug'">Exe</OutputType>
     <TargetFramework>net5.0</TargetFramework>
+    <UnoUIUseRoslynSourceGenerators>false</UnoUIUseRoslynSourceGenerators>
   </PropertyGroup>
   <ItemGroup Condition="exists('..\uno.UWP')">
     <EmbeddedResource Include="..\uno.UWP\Package.appxmanifest" LogicalName="Package.appxmanifest" />
