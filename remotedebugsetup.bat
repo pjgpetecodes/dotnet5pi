@@ -240,7 +240,7 @@ echo                     "reveal": "always", >> tasks.json
 echo                     "panel": "new" >> tasks.json
 echo                 }, >> tasks.json
 echo                 "windows": { >> tasks.json
-echo                     "command": "rsync -rvuz --rsh=\"c:\\cwrsync\\ssh\" --chmod=700 bin/linux-arm/publish/ pi@%pihostname%%:/home/pi/${workspaceFolderBasename}/" >> tasks.json
+echo                     "command": "c:\\cwrsync\\rsync -rvuz --rsh=\"c:\\cwrsync\\ssh\" --chmod=700 bin/linux-arm/publish/ pi@%pihostname%%:/home/pi/${workspaceFolderBasename}/" >> tasks.json
 echo                 }, >> tasks.json
 echo                 "problemMatcher": [] >> tasks.json
 echo             } >> tasks.json
