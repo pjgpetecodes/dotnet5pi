@@ -56,7 +56,7 @@ echo "|                                                            |"
 echo "--------------------------------------------------------------"
 echo(
 
-ssh-keyscan -H %pihostname% >> c:\users\.ssh\known_hosts
+ssh-keyscan -H %pihostname% >> c:\users\%username%\.ssh\known_hosts
 
 echo(
 echo "--------------------------------------------------------------"
