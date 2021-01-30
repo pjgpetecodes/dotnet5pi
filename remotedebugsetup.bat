@@ -95,7 +95,7 @@ if not exist "c:\cwrsync\rsync.exe" (
     move cwrsync c:\
     copy %userprofile%\.ssh\* c:\home\%username%\.ssh
     icacls c:\home /setowner %username% /R
-    icacls c:\home /inheritance:r /grant:r %username%:(OI)(CI)F /T
+    icacls c:\home /inheritance:r /grant:r "%username%:(OI)(CI)F" /T
 )
 
 echo(
