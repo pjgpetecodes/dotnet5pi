@@ -61,7 +61,21 @@ ssh-keyscan -H %pihostname% >> c:\users\%username%\.ssh\known_hosts
 echo(
 echo "--------------------------------------------------------------"
 echo "|                                                            |"
+echo "|                   Creating SSH Directory                   |"
+echo "|                                                            |"
+echo "|                 (Enter your login password)                |"
+echo "|                                                            |"
+echo "--------------------------------------------------------------"
+echo(
+
+ssh pi@%pihostname% -oStrictHostKeyChecking=no "mkdir -p ~/.ssh"
+
+echo(
+echo "--------------------------------------------------------------"
+echo "|                                                            |"
 echo "|              Copying SSH Keys to Raspberry Pi              |"
+echo "|                                                            |"
+echo "|                 (Enter your login password)                |"
 echo "|                                                            |"
 echo "--------------------------------------------------------------"
 echo(
