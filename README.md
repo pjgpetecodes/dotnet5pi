@@ -45,7 +45,7 @@ http://bit.ly/piremotedeployanddebug
 
 # Setup PC for Remote Deployment and Debugging an Uno Application
 
-If you'd like to be able to write code on your PC and then Deploy and Debug that code directly on a Raspberry Pi, then I've create a one line script to set that up;
+If you'd like to be able to Create an Uno Platform Application on your PC and then Deploy and Debug that code directly on a Raspberry Pi, then I've create a one line script to set that up;
 
 ```
 curl --output remotedebugsetup_uno.bat https://raw.githubusercontent.com/pjgpetecodes/dotnet5pi/master/remotedebugsetup_uno.bat && remotedebugsetup_uno.bat
