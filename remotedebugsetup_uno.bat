@@ -134,12 +134,22 @@ IF /I "%setupSSH%"=="y" (
 echo(
 echo "--------------------------------------------------------------"
 echo "|                                                            |"
-echo "|               Creating a .NET Uno Application              |"
+echo "|               Installing Uno Preview Templates             |"
 echo "|                                                            |"
 echo "--------------------------------------------------------------"
 echo(
 
 cd c:/
+dotnet new --install Uno.ProjectTemplates.Dotnet::3.5.0-dev.270
+
+echo(
+echo "--------------------------------------------------------------"
+echo "|                                                            |"
+echo "|               Creating a .NET Uno Application              |"
+echo "|                                                            |"
+echo "--------------------------------------------------------------"
+echo(
+
 dotnet new unoapp -o %pihostname%_unotest -ios=false -android=false -macos=false -wasm=false -skia-wpf=false -st=false 
 cd %pihostname%_unotest
 
