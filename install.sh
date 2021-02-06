@@ -154,12 +154,13 @@ fi
 
 echo -e "\e[0m"
 echo -e "\e[1m----------------------------------------"
-echo -e "\e[1m         Download Dubug Stub"
+echo -e "\e[1m         Download Debug Stub"
 echo -e "\e[1m----------------------------------------"
 echo -e "\e[0m"
 
 cd ~
-wget https://raw.githubusercontent.com/pjgpetecodes/dotnet5pi/master/dotnetdebug.sh -P /home/pi
+
+wget -O /home/pi/dotnetdebug.sh https://raw.githubusercontent.com/pjgpetecodes/dotnet5pi/master/dotnetdebug.sh
 chmod +x /home/pi/dotnetdebug.sh 
 
 echo -e "\e[0m"
