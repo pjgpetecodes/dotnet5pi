@@ -42,6 +42,19 @@ You can read more about this in a blog post here;
 
 http://bit.ly/piremotedeployanddebug
 
+
+# Setup PC for Remote Deployment and Debugging an Uno Application
+
+If you'd like to be able to write code on your PC and then Deploy and Debug that code directly on a Raspberry Pi, then I've create a one line script to set that up;
+
+```
+curl --output remotedebugsetup_uno.bat https://raw.githubusercontent.com/pjgpetecodes/dotnet5pi/master/remotedebugsetup_uno.bat && remotedebugsetup_uno.bat
+```
+
+You can read more about this in a blog post here;
+
+http://bit.ly/piremotedeployanddebuguno
+
 # IoT Hub Connection
 
 The 3 IoT Hub Based Examples will require an IoT Hub Device Primary Connection String to work. 
