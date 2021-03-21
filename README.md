@@ -22,7 +22,7 @@ wget -O - https://raw.githubusercontent.com/pjgpetecodes/dotnet5pi/master/instal
 
 # Local Install Script
 
-If you've cloned this repo, you can install Dot Net Core 3 by running the following in the root of the repo;
+If you've cloned this repo, you can install Dot Net 5 by running the following in the root of the repo;
 
 ```
 sudo chmod +x install.sh
