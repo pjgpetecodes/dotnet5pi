@@ -18,11 +18,11 @@ echo -e "\e[0m"
 dotnetver=$1
 
 if [[ "$dotnetver" = "" ]]; then
-  versionspage=$(wget -qO - https://dotnet.microsoft.com/download/dotnet)
-  matchrecommended='\.NET ([^ ]*) \(recommended release\)'
+    versionspage=$(wget -qO - https://dotnet.microsoft.com/download/dotnet)
+    matchrecommended='\.NET ([^ ]*) \(recommended release\)'
 
-  [[ $versionspage =~ $matchrecommended ]]
-  dotnetver=${BASH_REMATCH[1]}
+    [[ $versionspage =~ $matchrecommended ]]
+    dotnetver=${BASH_REMATCH[1]}
 fi
 
 sdkfile=/tmp/dotnetsdk.tar.gz
@@ -35,6 +35,18 @@ download() {
     matchdl='id="directLink" href="([^"]*)"'
     [[ $linkpage =~ $matchdl ]]
     wget -O $2 "${BASH_REMATCH[1]}"
+}
+
+detectArch() {
+    arch=arm32
+  
+    if command -v uname > /dev/null; then
+        machineCpu=$(uname -m)-$(uname -p)
+
+        if [[ $machineCpu == *64* ]]; then
+            arch=arm64
+        fi
+    fi
 }
 
 echo -e "\e[0m"
@@ -91,7 +103,9 @@ echo -e "\e[0m"
 [[ "$dotnetver" > "5" ]] && dotnettype="dotnet" || dotnettype="dotnet-core"
 downloadspage=$(wget -qO - https://dotnet.microsoft.com/download/$dotnettype/$dotnetver)
 
-download 'href="([^"]*sdk-[^"/]*linux-arm32-binaries)"' $sdkfile
+detectArch
+
+download 'href="([^"]*sdk-[^"/]*linux-'$arch'-binaries)"' $sdkfile
 
 echo -e "\e[0m"
 echo -e "\e[1m----------------------------------------"
@@ -99,7 +113,9 @@ echo -e "\e[1m       Getting ASP.NET Runtime $dotnetver"
 echo -e "\e[1m----------------------------------------"
 echo -e "\e[0m"
 
-download 'href="([^"]*aspnetcore-[^"/]*linux-arm32-binaries)"' $aspnetfile
+download 'href="([^"]*aspnetcore-[^"/]*linux-'$arch'-binaries)"' $aspnetfile
+
+exit
 
 echo -e "\e[0m"
 echo -e "\e[1m----------------------------------------"
