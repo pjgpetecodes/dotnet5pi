@@ -30,7 +30,13 @@ sudo ./install.sh
 
 ```
 
-# Setup PC for Remote Deployment and Debugging
+# PC Setup
+
+Download the latest version of the .NET framework for your system from here;
+
+https://dotnet.microsoft.com/download/dotnet/5.0
+
+# Remote Deployment and Debugging
 
 If you'd like to be able to write code on your PC and then Deploy and Debug that code directly on a Raspberry Pi, then I've create a one line script to set that up;
 
@@ -94,3 +100,20 @@ You may also need to install curl and zip if they're not already installed;
 ```
 sudo apt-get install curl
 ```
+
+# Ensuring that projects use .NET 5 and minor versions
+
+Now that we have .NET 6, if you have that installed, new projects will default to that automatically.
+
+To ensure that you create a .NET 5 project (assuming you want to!), create a global.json file with the following contents in the directory you want to create your project;
+
+```
+{
+  "sdk": {
+    "version": "5.0.401",
+    "rollForward": "latestMinor"
+  }
+}
+```
+
+It's also best to install the latest 
