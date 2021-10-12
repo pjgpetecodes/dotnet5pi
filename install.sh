@@ -115,8 +115,6 @@ echo -e "\e[0m"
 
 download 'href="([^"]*aspnetcore-[^"/]*linux-'$arch'-binaries)"' $aspnetfile
 
-exit
-
 echo -e "\e[0m"
 echo -e "\e[1m----------------------------------------"
 echo -e "\e[1m       Creating Main Directory"
