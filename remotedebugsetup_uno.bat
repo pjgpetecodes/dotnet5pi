@@ -121,7 +121,7 @@ IF /I "%setupSSH%"=="y" (
 
         mkdir c:\home\%USERNAME%\.ssh
         cd c:\home
-        curl --output cwrsync.zip https://itefix.net/dl/free-software/cwrsync_6.2.1_x64_free.zip && tar -xf cwrsync.zip
+        curl --output cwrsync.zip https://itefix.net/dl/free-software/cwrsync_6.2.7_x64_free.zip && tar -xf cwrsync.zip
         rename bin cwrsync
         move cwrsync c:\
         copy %userprofile%\.ssh\* c:\home\%username%\.ssh
